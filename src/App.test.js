@@ -53,6 +53,15 @@ describe('Star Wars APP',() => {
 
   })
 
+  //deberia mostrar un mensaje de error cuando falla la red 
+  it ('should show an error message when has a network error', async () =>{
+    window.fetch.mockRejectedValueOnce(new Error("Network error"));
+
+    render(<App/>);
+
+    expect(await screen.findByText("Network error")).toBeInTheDocument();
+  })
+
 
 
 })
