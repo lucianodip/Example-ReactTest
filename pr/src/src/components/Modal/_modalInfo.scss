@@ -1,0 +1,135 @@
+// /* MODAL INFO */
+
+
+.modal-content{
+    height: fit-content;
+    .modal-header:first-child{
+        border-bottom: none;
+    }
+    .modal-header:nth-child(2){
+        padding: 0;
+        margin: 0px 25px;
+        color: $color-red;
+        border-bottom: 1px solid #9EA5AA;
+    }
+    .modal-body{
+        color: $color-dark;
+        padding-top: 0;
+        overflow-y: scroll;
+        margin-top: 10px;
+        
+    }
+}
+.modal-title{
+    font-size: 16px;
+    width: 100%;
+    color: $color-red;
+    border-bottom: 1px solid #9EA5AA;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    border-bottom:none;
+}
+.modal-subtitulo{
+    padding: 0 10px;
+    color: $color-red;
+    font-size: 15px;
+}
+
+.modal-txt{
+    color: #222;
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.modal-txt span{
+    color: $color-red;
+    height: 500px;
+    font-weight: 500;
+}
+
+.container-arrow-down{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.arrow-down{
+    border: none;
+    background-color: transparent;
+    animation: arrow 1.75s infinite;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: $color-red;
+}
+.bi-chevron-down{
+    width: 20px;
+    font-size: 16px;
+}
+@keyframes arrow{
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-7px);
+    }
+    60% {
+        transform: translateY(-3.5px);
+    }
+}
+.modal-telegrama{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tribunal{
+        color: $color-red;
+        .bi-exclamation-circle{
+            font-size: 16px;
+            margin-right: 5px;
+        }
+    }
+    .modal-body{
+        height: fit-content;
+        overflow-y: none;
+        overflow: hidden;
+    }
+    .modal-footer{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+}
+
+
+.modal-telegrama-link{
+    font-weight: 500;
+    color: $color-blue;
+    cursor: pointer;
+    &:hover{
+        color: $color-dark-blue;
+    }
+}
+.modal-telegrama-btn{
+    border: none;
+    background-color: $color-blue;
+    color: $color-cards;
+    font-weight: 500;
+    border-radius: 4px;
+    &:hover{
+        background-color: $color-dark-blue;
+    }
+}
+// // MOBILE
+@media (max-width:$tablet){
+    .modal-content{
+        height: fit-content;
+    }
+    .modal-title{
+        font-size: 14px;
+        margin-bottom: 10px;
+        width:90%;
+    }
+    .modal-body{
+        height: 75vh;
+    }
+}

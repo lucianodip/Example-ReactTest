@@ -1,0 +1,50 @@
+
+.seccion-resumen{
+    width: 40%;
+    z-index: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.cabecera-resumen{
+    display: flex;
+    width: 100%;
+    background-color: $color-light-light-blue;
+    color: $color-dark-blue;
+    margin: 10px 0 15px 0;
+    border-radius: 4px;
+    padding: 12px;
+}
+.cabecera-resumen{
+    h3{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0;
+        color: $color-dark-blue;
+    }
+}
+
+@media (max-width: $tablet){
+    .seccion-resumen{
+        width: 100%;
+        z-index: 1;
+    }
+    .cabecera-resumen{
+        border-radius: 0;
+        margin: 0 0 0 0;
+    }
+}
+
+
+@media (min-width:$biggerDesktop){
+    .cabecera-resultados{
+        height: 110px;
+        margin: 10px 0 60px 0;
+        border-radius: 10px;
+        h3{
+            font-size: 35px;
+
+        }
+    }
+}

@@ -1,0 +1,220 @@
+/* NAV BOTTOM */
+.nav-bottom{
+    grid-area: nav-bottom;
+    background-color: $color-dark-blue;
+    width: 85px;
+    height: 100vh;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    .top-button-container{
+        transform: translateY(75%);
+        -moz-transform: translateY(75%);
+        -webkit-transform: translateY(75%);
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 26px;
+    }
+}
+@mixin active{
+    background-color: rgba(254, 254, 254, 0.4);
+    backdrop-filter: blur(4px);
+}
+.navbar-bottom-button{
+    color: $color-cards;
+    border:none;
+    background-color: transparent;
+    height: 60px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 350ms ease-out background-color;
+    border-radius: 4px;
+    // margin-bottom: 20px;
+
+        &.active{
+            @include active;
+        }
+        &:hover{
+            @include active;
+        }
+        &:nth-child(3){
+            display: none;
+        }  
+        .navbar-bottom-button-icon{
+            color: $color-cards;
+            font-size: 24px; 
+        }
+        span{
+            font-size: 11px;
+            color: $color-cards;
+            font-weight: 600;
+        }
+        .bi-person::before{
+            font-size:32px;
+        }
+        .bi-card-list::before{
+            font-size:28px;
+        }
+        .bi-info-circle::before{
+            font-size:28px;
+        }
+        .bi-pie-chart::before{
+            font-size:28px;
+        }
+        .bi-arrow-repeat:before{
+            font-size: 28px;
+            transform: rotate(90deg);
+        }
+    }
+    
+
+
+// MOBILE
+@media (max-width: $tablet){
+    .nav-bottom{
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height:9vh;
+        display: flex;
+        flex-flow: row wrap;
+        padding-bottom:0;
+        justify-content: space-between;
+        align-items:self-start;
+        transform: translateY(0);
+
+        .top-button-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 84%;
+            height: 0;
+            gap: 0;
+        }
+        .info-button-container{
+            width: 10vw;
+            display: flex;
+            flex-direction: row;
+            width: 16%;
+        }
+    }
+    .navbar-bottom-button{
+        border:none;
+        background-color: transparent;
+        height: 9vh;
+        width: 77px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: $color-cards;
+        &.activo{
+            border-radius: 0;
+        }
+        &:hover{
+            border-radius: 0;
+        }
+        &:nth-child(3){
+            display: flex;
+        }
+        &.active{    
+        border-radius: 0;
+        }
+    }
+    #listasButton{
+        margin-top: 0;
+    }
+    #actualizarButton{
+        margin-top: 0;
+    }
+    #infoButton{
+        margin-top: 0;
+    }
+}
+
+
+@media (min-width:$biggerDesktop){
+    .nav-bottom{
+        width: 200px;
+        .top-button-container{
+            height: 470px;
+            .navbar-bottom-button{
+                display: flex;
+                justify-content: space-around;
+                height: 150px;
+                width:200px;
+                &:nth-child(3){
+                    display: none;
+                }
+                .navbar-bottom-button-icon{
+                    &::before{
+                        font-size: 70px;
+                    }
+                }
+                span{
+                    font-size: 25px;
+                }
+            }
+
+        }
+        .info-button-container{
+            height: 200px;
+            .navbar-bottom-button{
+                height: 150px;
+                width: 200px;
+                display: flex;
+                justify-content: space-around;
+                .navbar-bottom-button-icon{
+                    &::before{
+                        font-size:70px;
+                    }
+                }
+                span{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .nav-bottom{
+        .top-button-container{
+            height: 600px;
+        }
+    }
+}
+
+@media (max-width: $mobile){
+    .top-button-container{
+        width: 80%;
+    }
+}
+
+
+@media (max-height: 580px){
+    .nav-bottom{
+        height:15vh;
+    }
+    .navbar-bottom-button{
+        height:15vh;
+    }
+}
+
+// tiny screen devices
+@media (max-width: 280px){
+    .nav-bottom{
+        width: 113vw;
+    }
+}

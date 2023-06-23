@@ -1,0 +1,64 @@
+// Mensaje en nueva pantalla Descargas
+
+    .container-message{
+        margin:200px 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-cards;
+        box-shadow: 0px 0px 3px rgba(34, 34, 34, 0.25);
+        padding: 70px;
+        border-radius: 4px;
+        .message{
+            .tituloMessage{
+                h2{
+                    color: $color-dark-blue;
+                    margin-bottom: 0;
+                    text-align: center;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+// estilos para skeleton loader
+.fondo-e{
+    height: 260px;
+}
+
+
+@media (max-width:$tablet){
+    .container-message{
+        margin:200px 20px;
+        .message{
+            .tituloMessage{
+                h2{
+                    font-size: 14px;
+                    line-height: 22px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:$mobile){
+    .container-message{
+        margin:80px 20px;
+        .message{
+            .tituloMessage{
+                h2{
+                    font-size: 14px;
+                    line-height: 22px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+
+

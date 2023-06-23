@@ -1,0 +1,25 @@
+// Estilos generales
+@import './base/settings';
+// Componentes
+@import '../components/Header/header';
+@import '../components/Mensajes/mensajes.scss';
+@import '../components/Navbar/navbar';
+
+@import '../components/Sidebar/sidebar'
+;
+@import '../components/NavCargos/navCargos';
+@import '../components/Breadcrumb/breadcrumb';
+
+@import '../components/Detalles/detalles';
+@import '../components/Card/card';
+@import '../components/Estado/estado';
+
+@import '../components/Chart/chart';
+@import '../components/Resumen/resumen';
+
+@import '../components/Modal/modalInfo';
+@import '../components/Fab/fab';
+@import '../components/Footer/footer';
+
+
+

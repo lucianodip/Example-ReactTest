@@ -6,6 +6,7 @@ import './App.css';
 function App() {
 
   //inicializamos la variable people en vacio
+  //inicializamos la variable people en vacio
   const [people,setPeople] = useState([]);
 
   //hook para manejo de errores, inicializa con la variable hasError en falso 

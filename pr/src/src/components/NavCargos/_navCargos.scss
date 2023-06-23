@@ -1,0 +1,105 @@
+/* CARGOS */
+.cargos {
+    margin: 0;
+    list-style: none;
+    background-color: $color-lighter-gray;
+    gap: 13px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .cargo-buttons{
+        display: flex;
+        gap: 10px;
+        flex-flow: row wrap;
+
+        .cargo-item-button {
+            border: none;
+            background-color: $color-blue;
+            color: $color-cards;
+            font-weight: 600;
+            text-transform: capitalize;
+            font-size: 12px;
+            padding: 5px 25px;
+            transition: 350ms ease-out background-color;
+            border-radius: 4px;
+                &:hover{
+                    background-color: $color-dark-blue;
+                }
+                &.active{
+                    background-color: $color-cargo-activo;
+                    pointer-events: none;
+                }
+        }
+    }
+    .seleccionar-cargo{
+        display: none;
+    }
+}
+
+@media (max-width:$tablet){
+    .cargos{
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        background-color: $color-fondo;
+        border-bottom: $color-lighter-gray 1px solid;
+        position: relative;
+        .cargo-buttons{
+            opacity: 0;
+            position: relative;
+            padding: 20px;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: 3;
+            height: auto;
+            width: 240px;
+            gap:20px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+            background-color: $color-cards;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            pointer-events: none;
+            &.active{
+                opacity: 1;
+                pointer-events: all;
+            }
+        }  
+        .seleccionar-cargo{
+            display: flex;
+            display: flex;
+            background-color: transparent;
+            border: none;
+            color: $color-blue;
+            font-weight: 500;
+            font-size: 14px;
+            align-items: center;
+
+            &:active{
+                background-color: transparent;
+                color: $color-blue;
+            }
+            .bi-chevron-down{
+                margin-left: 5px;
+            }
+        } 
+    }
+}
+
+
+@media (min-width:$biggerDesktop){
+    .cargos{
+        height: 150px;
+        .cargo-item-button{
+            height: 70px;
+            width:250px;
+            font-size: 20px !important;
+        }
+    }
+}

@@ -1,0 +1,204 @@
+.accordion{
+    width: 100%;
+    margin-top: 10px;
+    .accordion-item{
+        border: none;
+        .accordion-header{
+            .accordion-button{
+                font-weight: 600;
+                background-color: $color-dark-blue;
+                color: $color-cards;
+                text-transform: uppercase;
+                font-size: 18px;
+                border-radius: 4px;
+                &::after{
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); 
+                }
+                &:not(.collapsed)::after {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); 
+                }
+                &:not(.collapsed){
+                    background-color: $color-dark-blue;
+                    color: $color-cards;
+                    border-radius: 4px 4px 0 0;
+
+                }
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+        .accordion-collapse{
+            .accordion-body{
+                padding: 0;
+                .tabla-resumen{
+                    display: grid;
+                    grid-template-columns: 100%;
+                    margin-bottom: 20px;
+                        .resumen-row:nth-child(odd){
+                            background-color: $color-light-blue;
+                        }
+                        .resumen-row:nth-child(even){
+                            background-color: $color-lighter-blue;
+                        }
+                        .resumen-row{
+                                padding: 10px 15px;
+                            label{
+                                margin-right: 5px;
+                                font-weight: 600;
+                                color: $color-dark;
+                                font-size: 13px;
+                            }
+                            span{
+                                @extend label;
+                                color:$color-dark-blue;
+                                text-transform: uppercase;
+                            }
+                        }
+                }
+                .tabla-mesas{
+                    .tabla-mesas-head{
+                        h4{
+                            font-weight: 600;
+                        }
+                    }
+                    margin-bottom: 20px;
+                        .tabla-mesas-head{
+                            display: grid;
+                            grid-auto-flow: column;
+                            grid-template-columns: 2fr 1fr 1fr;
+                            background-color: $color-blue-turquoise;
+                            height: 51px;
+                            align-content: center;
+                            padding: 15px;
+                                h4{
+                                    color: $color-cards;
+                                    margin: 0;
+                                    font-size: 13px;
+                                }
+                        }
+                        .mesas-row:nth-child(odd){
+                            background-color: $color-cards;
+                        }
+                        .mesas-row:nth-child(even){
+                            background-color: $color-lighter-blue;
+                        }
+                        .mesas-row{
+                            display: grid;
+                            grid-auto-flow: column;
+                            grid-template-columns:2fr 1fr 1fr;
+                            height:auto;
+                            padding: 10px 15px;
+                                label{
+                                    font-size: 13px;
+                                    font-weight: 400;
+                                    color:$color-light-dark;
+                                    margin: 0;
+                                    color: $color-dark-blue;
+                                    font-weight: 600;
+                                }
+                                span{
+                                    @extend label;
+                                }
+                        }
+                    }
+                    .mesas-row-votos-validos{
+                        display: grid;
+                        grid-auto-flow: column;
+                        grid-template-rows: repeat(2, 40px);
+                        .mesas-sub-row{
+                            display: grid;
+                            grid-auto-flow: column;
+                            grid-template-columns: 2fr 1fr 1fr;
+                            height: auto;
+                            padding: 10px 15px;
+                            background-color: $color-cards;    
+                            label{
+                                font-size: 13px;
+                                font-weight: 400;
+                                color:$color-light-dark;
+                                margin: 0;
+                                color: $color-dark-blue;
+                                font-weight: 500;
+                                margin-left: 10px;
+                            }
+                            span{
+                                font-size: 13px;
+                                font-weight: 400;
+                                color:$color-light-dark;
+                                color: $color-dark-blue;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+// MOBILE
+@media (max-width: $tablet){
+    .accordion{
+        width: 95%;
+        margin: 10px auto;
+        .accordion-button{
+            border-radius: 4px 4px 0 0;
+            &::after{
+                visibility: hidden;
+            }
+        }
+    }                   
+}
+
+@media (min-width: $biggerDesktop){
+    .accordion{
+        .accordion-item{
+            .accordion-header{
+                .accordion-button{
+                    font-size: 28px;
+                }
+            }
+            .accordion-collapse{
+                .accordion-body{
+                    .tabla-resumen{
+                        .resumen-row {
+                            padding: 22px 15px;
+                            font-size: 28px;
+                            label{
+                                font-size: 28px;
+                            }
+                        }
+                    }
+                    .tabla-mesas{
+                        h4{
+                            font-size: 30px;
+                        }
+                        .tabla-mesas-head{
+                            height: 90px;
+                        }
+                        .mesas-row{
+                            label{
+                                font-size: 30px;
+                            }
+                        }
+                        .mesas-row-votos-validos{
+                            height: auto;
+                            .mesas-sub-row{
+                                padding: 0px 15px;
+                                label{
+                                    font-size: 26px;
+                                }
+                                span{
+                                    font-size: 26px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }  
+}
+
+
+

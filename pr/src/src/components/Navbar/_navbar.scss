@@ -1,0 +1,628 @@
+/* NAVBAR TOP */
+.navbar{
+    background-color: $color-dark-blue;
+    color:$color-cards;
+    padding: 0;
+    // z-index: -1;
+    .container{
+        padding: 0;
+        .navbar-brand{
+            display: none;
+            font-family: Montserrat;
+            font-weight: 600;
+        }
+        .navbar-toggler:focus{
+            box-shadow: none;
+        }
+    }
+}
+.logos{
+    display: none;
+}
+@media (max-width:$tablet){
+    .logos{
+        gap: 20px;
+        display: flex;
+        .logo-elecciones-mobile{
+            height: 45px;
+            width: auto;
+        }
+        .cabecera-logo-provincia{
+            width:auto;
+            height: 40px;
+        }
+    }
+    
+}
+
+.consultar{
+    border: none;
+    background-color: $color-red;
+    color: $color-cards;
+    // padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px !important;
+    text-align: center;
+    &:hover{
+        background-color: $color-red-hover;
+        color: $color-cards;
+        
+    }
+    &:focus-visible{
+        background-color: $color-red;
+        box-shadow: none;
+    }
+    &:active{
+        background-color: $color-red;
+    }
+    
+}
+
+.dropdown-item{
+    &.active{
+        background-color: $color-red;
+    }
+}
+.navbar-nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: $color-lighter-gray;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2px;
+    align-items: center;
+}
+.btn-primary{
+    border-radius: 0;
+}
+
+.dropdown{
+    width: 100%;
+}
+.filtro-item-button{
+    width: 100%;
+    background-color: $color-dark-blue;
+    color:$color-cards;
+    border: none;
+    min-width: 145px;
+    font-weight: 600;
+    height: 51px;
+    font-size: 12px;
+    transition: 350ms ease-out background-color;
+    &:focus-visible{
+        box-shadow: none;
+    }
+    &.active{
+        background-color: $color-filtro-selected;
+        &:hover{
+            background-color: none;
+        }
+    }
+    &:hover{
+        background-color: $color-blue-turquoise;
+    }
+
+} 
+
+.btn.btn-primary:active{
+    background-color: $color-filtro-selected;
+    border-color: $color-filtro-selected;
+}
+.container-dropdown{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+.dropdown-menu{
+    width: fit-content;
+    background-color: $color-cards;
+    padding: 25px;
+    
+}
+
+
+
+
+.dropdown-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 0;
+        height: 150px;
+
+
+        .leyenda-dropdown{
+            color:$color-red;
+            font-size: 11px;
+            font-weight: 500;
+            height: 20px;
+
+        }
+        .leyenda-dropdown-disabled{
+            opacity: 0;
+            height: 20px;
+        }
+    }
+.container-input{
+    border-radius: 0;
+    background-color: $color-cards;
+}
+
+.provincia{
+    text-decoration: none;
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.localidad{
+    .container-input{
+        width: 250px;
+        input{
+            width: 100%;
+        } 
+    }
+}
+.seccional{
+    .dropdown-menu{
+        .dropdown-body{
+            height: 160px;
+        }
+    }
+}
+.local{
+    .container-input{
+        width: 250px;
+        input{
+            width: 100%;
+        }    
+        .collapse{
+            width: 70%;
+        }
+    }
+}
+.mesa{
+    .dropdown-menu{
+        left: 12px;
+        .dropdown-body{
+            // margin-top: 20px;
+            // height: 155px;
+            height:200px;
+        }
+    }
+    .container-input{
+        width: 250px;
+        .input-group-text{
+            .checkbox-input{
+                width: 16px;
+                height: 16px;
+            }
+            
+        }    
+    }
+}
+.input-group > .form-control{
+    border-radius: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1390px){
+    .mesa{
+        .dropdown-menu{
+            left: -20px;
+        }
+    }
+}
+@media screen and (max-width: 1193px){
+    .mesa{
+        .dropdown-menu{
+            left: -59px;
+        }
+    }
+}
+@media screen and (max-width: 993px){
+    .mesa{
+        .dropdown-menu{
+            left: -102px;
+        }
+
+    }
+}
+.container-input{
+    input{
+        border: none;
+        border-radius: 0;
+        border-bottom: solid 1px $color-blue-turquoise;
+        padding: 0;
+        width: fit-content;
+        font-size: 13px;
+    }
+}
+.container-input{
+    input{
+        &:focus{
+            box-shadow: none;
+        }
+        &::placeholder{
+            font-size: 13px;
+            background-color: $color-cards;
+            color: $color-light-dark;
+        }
+    }
+} 
+.form-select{
+    background-color: $color-select;
+    height: 31px;
+    width: 300px;
+    font-size: 13px;
+    border-radius: 4px;
+    &:focus{
+        box-shadow: none;
+        border-color: rgba(0,0,0,0.175);
+    }
+}
+.form-select{
+    option{
+        background-color: $color-cards;
+    }
+}
+.container-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 13px;
+    .input-group-text{
+        background-color: transparent;
+        border: none;
+        padding: 0 10px 0 0;
+    }
+        .checkbox-input{
+            border: 1px solid gray;
+            cursor: pointer;
+            &[type="checkbox"] {
+                accent-color: $color-blue;
+            }
+        }
+        .checkbox-label{
+            font-size: 12px;
+            color:$color-dark;
+            width: 139px;
+            text-align: center;
+            line-height: 14px;
+        }
+}
+.react-autosuggest__suggestion{
+    color: $color-dark;
+    font-weight: 400;
+    &:hover{
+        background-color: $color-blue;
+        color: $color-cards;
+        font-weight: 400;
+    }
+}
+
+.btn.show{
+    background-color: $color-blue-turquoise;
+    box-shadow: none;
+}
+// MOBILE
+@media (max-width:$tablet){
+    .navbar{
+        width: 100vw;
+        border-radius: 0;
+        padding: 0;
+        .container-navbar-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 0;
+            .navbar-brand{
+                display: flex;
+                font-size: 16px;
+                margin-left: 10px;
+                justify-content: space-between;
+                width: 80%;
+                .titulo-mobile{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h6{
+                        font-size: 12px;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-nav{
+        width: 100vw;
+        display: flex;
+        padding: 0;
+        grid-gap: 1px;
+        background-color: $color-fondo;
+        &:first-child{
+            border-radius: 0;
+        }
+        &:last-child{
+            border-radius: 0;
+        }
+    }
+    .navbar-toggler{
+        margin-right: 10px;
+        
+    }
+    .btn-group{
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-cards;
+    }
+    .filtro-item-button{
+        border: none;
+        width: 100%;    
+        font-size: 13px;
+        background-color: $color-blue-turquoise;  
+        &:hover{
+            background-color: none;
+        }
+        &.active{
+            background-color: $color-filtro-active-mobile;
+            color: $color-cards;
+        }
+        &.selected{
+            background-color: #6696AF;
+        }
+    }
+.btn.show{
+    background-color: $color-navbarTop-active;
+    color: $color-dark-blue;
+}
+.dropdown-menu{
+    border: none;
+    background-color: transparent;
+    padding: 8px 0;
+    margin: 0 auto;
+    .btn-group{
+        max-height: 0;
+        transition:350ms;
+        opacity: 0;
+        
+    }
+}
+@mixin navbarTop-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: none;
+    padding: 20px 0;
+}
+
+.departamento{
+    .dropdown-menu{
+        padding: 45px 0;
+    }
+    .collapse{
+        width: 70%;
+    }
+}
+.localidad{
+    .dropdown-menu{
+        padding: 20px 0;
+    }
+    .container-input{
+        width: 300px;
+    }
+}
+
+.seccional{
+    .dropdown-menu{
+        padding: 20px 0;
+        .container-dropdown{
+            height: 100px;
+        }
+    }
+}
+
+.local{
+    .dropdown-menu{
+        padding: 20px 0;
+    }
+    .container-input{
+        width: 300px;
+    }
+}
+
+.mesa{
+    .dropdown-menu{
+        padding: 20px 0;
+    }
+
+    .container-input{
+        width: 300px;
+    }
+    .form-control{
+        width: 100%;
+    }
+}
+.form-control{
+    input{
+        background-color: $color-fondo;
+    }
+}
+.mesa{
+    .dropdown-menu{
+        left: 0;
+    } 
+}
+.container-input{
+    input{
+        width: 100%;
+        background-color: $color-cards;
+        &::placeholder{
+            font-size: 13px;
+            background-color: $color-cards;
+            color: $color-light-dark;
+        }
+    }
+    button{
+        width: 100%;
+    }
+}
+.mesa{
+    .container-input{
+        .checkbox-input{
+            width: 16px;
+            height: 16px;
+            margin: 0;
+        }
+    }
+}
+.container-checkbox{
+        .checkbox-input{
+            width: 100%;
+            margin-right: 10px;
+        }
+        .checkbox-label{
+            width: 160%;     
+            margin-bottom: 10px;   
+            text-align: start;
+        }
+    }
+}
+@media (min-width: $biggerDesktop) {
+    .navbar{
+        height: 100px;
+    }
+    .filtro-item-button{
+        height:100px;
+        font-size: 28px;
+        }
+}
+
+// React Autosuggest styles
+
+/* container general */
+.react-autosuggest__container {
+    width: 100%;
+}
+/* styles input */
+.react-autosuggest__input {
+    background-color: $color-cards;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    &::placeholder{
+        color: $color-light-dark;
+    }
+}
+
+//   input cuando esta seleccionado
+.react-autosuggest__input--focused {
+    outline: none;
+}
+
+.react-autosuggest__input--open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+    display: none;
+}
+  /* contenedor lista */
+.react-autosuggest__suggestions-container--open {
+    display: block;
+    position: absolute;
+    width: 192px;
+    border: 1px solid $color-lighter-gray;
+    background-color: $color-cards;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+.react-autosuggest__suggestion {
+    cursor: pointer;
+    padding: 10px 20px;
+    
+}
+  /* styles hover lista */
+.react-autosuggest__suggestion--highlighted {
+    background-color: $color-cards;
+}
+
+/* This fires as soon as the element enters the DOM*/
+.list-transition-enter {
+    /*We give the list the initial dimension of the list button*/
+    top: 0;
+    width: 120px;
+    max-height: 40px;
+    color: transparent;
+    background-color: #5a564c;
+    }
+    /* This is where we can add the transition*/
+    .list-transition-enter-active {
+    top: 45px;
+    width: 200px;
+    max-height: 200px;
+    background-color: #9e8949;
+    transition: all 400ms;
+    }
+
+    .list-transition-enter, .list-transition-appear {
+        /*We give the list the initial dimension of the list button*/
+        top: 0;
+        width: 120px;
+        max-height: 40px;
+        color: transparent;
+        background-color: #5a564c;
+        }
+        /* This is where we can add the transition*/
+        .list-transition-enter-active, .list-transition-appear-active {
+        top: 45px;
+        width: 200px;
+        max-height: 200px;
+        background-color: #9e8949;
+        transition: all 400ms;
+        }
+
+@media (max-width: $mobile){
+    .navbar{
+        .container-navbar-header{
+            .navbar-brand{
+                width: 75%;
+                .titulo-mobile{
+                    h6{
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    } 
+}
